@@ -1,2 +1,2 @@
 # converter
-Repo for Choice Coin blockchain converter
+Repo for Choice Coin blockchain converter.
