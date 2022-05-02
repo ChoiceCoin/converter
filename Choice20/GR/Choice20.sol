@@ -58,3 +58,5 @@ contract ChoiceCoinERC20 {
         return true;
     }
 }
+
+// https://ropsten.etherscan.io/tx/0x05cc831f8a909fcc99862f7aad58380bbbd77ec2ea56400fa6e4a10fccb4b884
