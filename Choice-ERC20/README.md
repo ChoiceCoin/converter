@@ -42,10 +42,10 @@ PROJECT_URL=""
 -  Update the ERC-20 information in the `2-ERC-20.js` file as you like
 
 ```
-const totalSupply = 10 ** 6 * 10 ** 5; 
-const decimals = 5;
-const name = "Choice Coin ERC20";
-const symbol = "$CHOICE";
+const totalSupply = 10 ** 9 * 10 ** 2; 
+const decimals = 2;
+const name = "Choice Coin";
+const symbol = "Choice";
 ```
 - Make sure you have testnet rinkeby eth before deploying contract, you can use the [Rinkeby faucet](https://rinkebyfaucet.com/)
 
