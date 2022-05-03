@@ -1,0 +1,18 @@
+{
+  "name": "choice-erc-20",
+  "version": "1.0.0",
+  "description": "This is Choice Erc20 token w solidity and truffle",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Aspirin",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.7.0",
+    "dotenv": "^16.0.0"
+  }
+}
