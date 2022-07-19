@@ -41,22 +41,28 @@ function App() {
         <h1>
           Choice Coin Converter
         </h1>
-        <label>
-          Ethereum Address:
-        <input type="text" name="name" />
-        </label>
-        <label>
-          Amount:
-        <input type="text" name="name" />
-        </label>
+        <p>
+          <div>
+            Ethereum Address:
+            <input type="text" name="name" />
+          </div>
+          <div>
+            Amount:
+            <input type="text" name="name" />
+          </div>
+        </p>
+        <p>
+          <div>
+            <WalletConnect />
+          </div>
+          <div>
+            <Converter />
+          </div>
+          <div>
+          You agree to Choice Coin's Terms and Conditions
+          </div>
+        </p>
 
-
-        <div>
-        <WalletConnect />
-        </div>
-        <div>
-        <Converter />
-        </div>
       </header>
     </div>
   );
