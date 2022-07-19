@@ -1,11 +1,13 @@
 // Imports
 import './App.css';
 //import algosdk from "algosdk";
+import { PeraWalletConnect } from "@perawallet/connect";
+
+const perawallet = new PeraWalletConnect()
 
 // Smart Contract
-function Converter() {
    // Algorand Network Connection
-   const algod_token = {
+ const algod_token = {
     'X-API-Key': ''
   }
   const algod_address = '';
@@ -18,20 +20,16 @@ function Converter() {
   const contract = () => {
     console.log('Converter')
   }
-  return (
-    <button onClick={contract}>Convert Choice</button>
-  )
-};
+
+
 
 // Wallet Connect
-function WalletConnect() {
-  const wallet = () => {
+async function walletConnect() {
+  await perawallet.connect()
     console.log('Connect')
   }
-  return(
-    <button onClick={wallet}>Connect Wallet</button>
-  )
-};
+  
+
 
 // React functions must return a React component
 function App() {
@@ -53,10 +51,10 @@ function App() {
         </p>
         <p>
           <div>
-            <WalletConnect />
+          <button onClick={walletConnect}>Connect Wallet</button>
           </div>
           <div>
-            <Converter />
+          <button onClick={contract}>Convert Choice</button>
           </div>
           <div>
           You agree to Choice Coin's Terms and Conditions
