@@ -4,6 +4,7 @@ import algosdk from "algosdk";
 import { PeraWalletConnect } from "@perawallet/connect";
 import { useEffect } from 'react';
 
+// perawallet instantiating
 const perawallet = new PeraWalletConnect()
 
 // algoClient
@@ -12,7 +13,6 @@ const algod_token = {
 }
 const algod_address = "https://testnet-algorand.api.purestake.io/ps2";
 const headers = "";
-
 const algodClient = new algosdk.Algodv2(algod_token, algod_address, headers);
 
 //get address
@@ -43,9 +43,6 @@ const  transaction = async () => {
     await algodClient.sendRawTransaction(signedTxn).do();
 }
 
-
-
-
 // Wallet Connect
 async function walletConnect() {
   const newAccounts= await perawallet.connect()
@@ -62,6 +59,7 @@ const disconnect = () => {
 }
 // React functions must return a React component
 function App() {
+
 // useEffect to connect to perawallet after reload
   useEffect(() => {
     perawallet.reconnectSession().then((accounts) => {
