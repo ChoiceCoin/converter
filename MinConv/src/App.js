@@ -1,4 +1,6 @@
 // Imports
+// <button id='button1' onClick={address ? disconnect:  walletConnect}>{address ? 'Disconnect' : 'Connect Wallet'}</button>
+
 import './App.css';
 import algosdk from "algosdk";
 import { PeraWalletConnect } from "@perawallet/connect";
@@ -75,7 +77,7 @@ function App() {
     <div className="App">
       <header className="App-header">
           <div>
-            <button id='button1' onClick={address ? disconnect:  walletConnect}>{address ? 'Disconnect' : 'Connect Wallet'}</button>
+            <button id='button1' onClick={walletConnect}> Connect</button>
           </div>
         <h1>
           Choice Coin Converter
@@ -99,13 +101,16 @@ function App() {
           </div>
         </div>
       </p>
-        <div>
+        <p>
           <button id='button' onClick={transaction}>Convert</button>
-        </div>
-        <p id="message0"></p>
-        <p id="message1"></p>
+        </p>
+        <p>
+          <button id='button2' onClick={disconnect}> Disconnect</button>
+        </p>
       </header>
     </div>
   );
 
 }
+
+export default App;
