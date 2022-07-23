@@ -5,23 +5,19 @@ import { PeraWalletConnect } from "@perawallet/connect";
 
 const perawallet = new PeraWalletConnect()
 
-// Smart Contract
-   // Algorand Network Connection
- const algod_token = {
-    'X-API-Key': ''
+
+function SmartButton() {
+  const recieverAddress = () => {
+    console.log("Transaction Sending.")
+    const recieverValue = document.getElementById('reciever').value
+    document.getElementById('message0').textContent = "Sending to "+recieverValue;
+    const amountValue = document.getElementById('amount').value
+    document.getElementById('message1').textContent = "Amount to send"+amountValue;
   }
-  const algod_address = '';
-  const headers = '';
-  const ASSET_ID = 297995609;
-  //const algodClient = new algosdk.Algodv2(algod_token, algod_address, headers);
-  const serviceAddress = ''
-
-  // Contract
-  const contract = () => {
-    console.log('Converter')
-  }
-
-
+  return (
+    <button id='button' onClick={recieverAddress}>Convert</button>
+  )
+}
 
 // Wallet Connect
 async function walletConnect() {
@@ -42,22 +38,24 @@ function App() {
         <p>
           <div>
             Ethereum Address:
-            <input type="text" name="name" />
+            <input id="reciever" type="text"/>
           </div>
           <div>
             Amount:
-            <input type="text" name="name" />
+            <input id="amount" type="text"/>
           </div>
         </p>
+          <div>
+            <SmartButton />
+          </div>
+        <p id="message0"></p>
+        <p id="message1"></p>
         <p>
           <div>
-          <button onClick={walletConnect}>Connect Wallet</button>
+            <button onClick={walletConnect}>Connect Wallet</button>
           </div>
           <div>
-          <button onClick={contract}>Convert Choice</button>
-          </div>
-          <div>
-          You agree to Choice Coin's Terms and Conditions
+            You agree to Choice Coin's Terms and Conditions
           </div>
         </p>
 
@@ -68,3 +66,4 @@ function App() {
 }
 
 export default App;
+
