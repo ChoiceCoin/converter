@@ -37,3 +37,22 @@
     transform: rotate(360deg);
   }
 }
+
+#button {
+  background-color: black;
+  padding: 10px;
+  width: 100px;
+  color:aliceblue;
+  border-radius: 10px;
+
+}
+
+#button1 {
+  background-color: black;
+  padding: 10px;
+  width: 100px;
+  color:aliceblue;
+  border-radius: 10px;
+
+}
+
