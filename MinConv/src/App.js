@@ -30,8 +30,7 @@ const  transaction = async () => {
   const ethAddress = document.getElementById('reciever').value
   const enc = new TextEncoder();
   const note = enc.encode('Transaction with perawallet:'+ ethAddress);
-
- const txn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
+  const txn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
     from: address,
     to: converterAddress,
     amount: 1,
@@ -49,19 +48,18 @@ async function walletConnect() {
   const newAccounts= await perawallet.connect()
   localStorage.setItem("address", newAccounts[0]);
   window.location.reload()
-    console.log('Connect')
+  console.log('Connect')
   }
-// wallet disconnect
 
+// wallet disconnect
 const disconnect = () => {
   perawallet.disconnect()
   localStorage.removeItem("address");
   window.location.reload()
 }
+
 // React functions must return a React component
 function App() {
-
-// useEffect to connect to perawallet after reload
   useEffect(() => {
     perawallet.reconnectSession().then((accounts) => {
       if (accounts.length) {
@@ -77,7 +75,7 @@ function App() {
     <div className="App">
       <header className="App-header">
           <div>
-          <button id='button1' onClick={address ? disconnect:  walletConnect}>{address ? 'Disconnect' : 'Connect Wallet'}</button>
+            <button id='button1' onClick={address ? disconnect:  walletConnect}>{address ? 'Disconnect' : 'Connect Wallet'}</button>
           </div>
         <h1>
           Choice Coin Converter
@@ -102,7 +100,7 @@ function App() {
         </div>
       </p>
         <div>
-        <button id='button' onClick={transaction}>Convert</button>
+          <button id='button' onClick={transaction}>Convert</button>
         </div>
         <p id="message0"></p>
         <p id="message1"></p>
@@ -111,5 +109,3 @@ function App() {
   );
 
 }
-
-export default App;
