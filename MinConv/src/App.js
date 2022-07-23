@@ -1,5 +1,4 @@
 // Imports
-// <button id='button1' onClick={address ? disconnect:  walletConnect}>{address ? 'Disconnect' : 'Connect Wallet'}</button>
 
 import './App.css';
 import algosdk from "algosdk";
