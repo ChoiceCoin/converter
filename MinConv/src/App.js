@@ -9,7 +9,7 @@ const perawallet = new PeraWalletConnect()
 
 // algoClient
 const algod_token = {
-  "X-API-Key": "7juTcdmLxzA0uuUyNvrG5BPj7KKRX5n1FXK9aoAa" 
+  "X-API-Key": "" 
 }
 const algod_address = "https://testnet-algorand.api.purestake.io/ps2";
 const headers = "";
