@@ -9,7 +9,7 @@ const perawallet = new PeraWalletConnect()
 
 // algoClient
 const algod_token = {
-  "X-API-Key": "" //ADD YOUR API KEY
+  "X-API-Key": "7juTcdmLxzA0uuUyNvrG5BPj7KKRX5n1FXK9aoAa" 
 }
 const algod_address = "https://testnet-algorand.api.purestake.io/ps2";
 const headers = "";
@@ -27,8 +27,9 @@ const ASSET_ID = 42771692;
 /// transaction code
 const  transaction = async () => {
   const suggestedParams = await algodClient.getTransactionParams().do();
+  const ethAddress = document.getElementById('reciever').value
   const enc = new TextEncoder();
-  const note = enc.encode('Transaction with perawallet');
+  const note = enc.encode('Transaction with perawallet:'+ ethAddress);
 
  const txn = algosdk.makeAssetTransferTxnWithSuggestedParamsFromObject({
     from: address,
@@ -64,7 +65,7 @@ function App() {
   useEffect(() => {
     perawallet.reconnectSession().then((accounts) => {
       if (accounts.length) {
-            localStorage.setItem("address", accounts[0]);
+        localStorage.setItem("address", accounts[0]);
       }
       perawallet.connector?.on("disconnect", () => {
         localStorage.removeItem("address");
@@ -72,7 +73,6 @@ function App() {
     })
     .catch((e) => console.log(e));
   }, [])
-
   return (
     <div className="App">
       <header className="App-header">
@@ -91,12 +91,14 @@ function App() {
             <input id="amount" type="text"/>
           </div>
         <p>
+          <div>
+            You must agree to Choice Coin's Terms and Conditions.
+          </div>
         <div>
-         You must agree to Choice Coin's Terms and Conditions.
-        </div>
-        <div>
-          Check the box to affirm acceptance.
-          <input id="TC" type="radio"/>
+          <div>
+            Check the box to affirm acceptance.
+            <input id="TC" type="radio"/>
+          </div>
         </div>
       </p>
         <div>
@@ -111,4 +113,3 @@ function App() {
 }
 
 export default App;
-
