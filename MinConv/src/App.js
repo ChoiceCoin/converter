@@ -19,7 +19,7 @@ const algodClient = new algosdk.Algodv2(algod_token, algod_address, headers);
 const address = localStorage.getItem('address');
 
 // converter address
-const converterAddress = 'GJBPDHMNYDHAHLDCXXWLVHJDK3U3OYX5VHEUHREI5SXMLLBM6J4ALBZSWI'
+const converterAddress = ''
 
 //asset id
 const ASSET_ID = 42771692;
