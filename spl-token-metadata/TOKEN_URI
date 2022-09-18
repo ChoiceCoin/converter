@@ -2,5 +2,5 @@
   "name": "Choice Coin",
   "symbol": "Choice",
   "description": "Choice Coin is a decentralized governance token.",
-  "image": "TOKEN_IMAGE_URL"
+  "image": "https://github.com/ChoiceCoin/converter/blob/main/spl-token-metadata/Choice.png"
 }
