@@ -1,0 +1,9 @@
+{
+  "name": "Choice Coin", 
+  "symbol": "Choice",
+  "uri": "TOKEN_URI",
+  "sellerFeeBasisPoints": 0,
+  "creators": null,
+  "collection": null,
+  "uses": null
+}
