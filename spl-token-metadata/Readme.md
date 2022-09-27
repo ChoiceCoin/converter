@@ -10,8 +10,11 @@ Folder for SPL Token MetaData. The goal is to add MetaData to the SPL token. As 
 # SPL Token MetaData Problems Solved
 
 Metaplex [Issue 748](https://github.com/metaplex-foundation/metaplex-program-library/issues/748)
+
 Metaplex [Issue 2248](https://github.com/metaplex-foundation/metaplex/issues/2248)
+
 Metaplex [Issue 295](https://github.com/metaplex-foundation/js/issues/295)
+
 Metaplex [Issue 3621](https://github.com/solana-labs/solana-program-library/issues/3621)
 
 
