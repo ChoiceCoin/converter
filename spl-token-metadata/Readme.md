@@ -1,5 +1,5 @@
 # Choice SPL
-Folder for SPL Token MetaData. The goal is to add MetaData to the SPL token. As of 9/26/22, we have added an initial MetaData file to Choice Coin. Next, we will add an [updated image file](https://github.com/metaplex-foundation/js/issues/313) and complete a [burn](https://forums.solana.com/t/method-for-spl-token-burn/11044) according to the [token program](https://spl.solana.com/token) beofre launching the asset on [Orca](https://www.orca.so/).
+Folder for SPL Token MetaData. The goal is to add MetaData to the SPL token. As of 9/26/22, we have added an initial MetaData file to Choice Coin. Next, we will add an [updated image file](https://github.com/metaplex-foundation/js/issues/313) and complete a [burn](https://forums.solana.com/t/method-for-spl-token-burn/11044) according to the [token program](https://spl.solana.com/token) beofre launching the asset on [Orca](https://www.orca.so/). Potential burn instructions [script](https://github.com/solana-labs/solana-program-library/blob/4a8fead0753785e6847da29bf43afb92b4d6c492/token/program/src/instruction.rs#L195-L197).
 
 # Asset Addresses and Accounts
 
